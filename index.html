@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatipble" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="stylesheet"href="Style.css">
+
+
+    <script>
+            
+            function appendOperation(operation) 
+                {document.getElementById("resultArea").innerHTML += operation;
+            }
+            
+            function calculateResult(){
+            let container = document.getElementById("resultArea");
+            let result = eval(container.innerHTML);
+            container.innerHTML = result;
+            }
+
+            function deletelast() {
+                let container = document.getElementById("resultArea");
+                if (container.innerHTML.endsWith(``)){
+                    container.innerHTML = container.innerHTML.slice(0, -3);
+                } else {
+                    container.innerHTML = container.innerHTML.slice(0, -1);
+                }
+            }
+            function Wurzel() {
+                let container = document.getElementById("resultArea");
+                let result = Math.sqrt(container.innerHTML)
+                container.innerHTML = result;
+            }     
+            function hochzwei() {
+                let container = document.getElementById("resultArea");
+                let result = Math.pow(container.innerHTML, 2)
+                container.innerHTML = result;
+                
+            }
+
+    </script>
+
+
+</head>
+
+<body>
+ 
+    <Div id="resultArea"></Div>
+ 
+ <table>
+    <tr>
+        <td onclick="deletelast(``)"class="highlight">DEL</td>        
+        <td onclick="Wurzel(` √ `)"class="highlight">√</td>
+        <td onclick="hochzwei(` x² `)"class="highlight">x²</td>
+        <td> ToF&copy</td>
+
+    </tr>
+    <tr>     
+        <td onclick="appendOperation(7)">7</td>
+        <td onclick="appendOperation(8)">8</td>
+        <td onclick="appendOperation(9)">9</td>
+        <td onclick="appendOperation(` / `)"class="highlight">/</td>
+    </tr>
+
+
+    <tr>
+        <td onclick="appendOperation(4)">4</td>
+        <td onclick="appendOperation(5)">5</td>
+        <td onclick="appendOperation(6)">6</td>
+        <td onclick="appendOperation(` * `)"class="highlight">*</td>
+    </tr>
+
+
+    <tr>
+        <td onclick="appendOperation(1)">1</td>
+        <td onclick="appendOperation(2)">2</td>
+        <td onclick="appendOperation(3)">3</td>
+        <td onclick="appendOperation(` + `)"class="highlight">+</td>
+    </tr>
+
+    <tr>
+        <td onclick="appendOperation(0)">0</td>
+        <td onclick="appendOperation(`.`)">.</td>
+        <td onclick="calculateResult()" id="result">=</td>
+        <td onclick="appendOperation(` - `)"class="highlight">-</td>
+    </tr>
+        
+
+ </table>
+</body>
+
+</html>

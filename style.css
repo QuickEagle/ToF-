@@ -1,0 +1,69 @@
+body {
+    font-family: "Bungee Spice", sans-serif;
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0
+}
+
+
+
+table {
+    width: 100%;
+    height: 70vh;
+    color: rgb(20, 20, 20);
+    background-color: rgb(129, 50, 50);
+    font-family: "Bungee Spice", sans-serif;
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+    font-weight: 400;
+    font-style: normal;
+}
+    
+
+td {
+    width: 25%;
+    text-align: center;
+    background-color: rgb(153, 112, 112);
+    font-size: 50px;
+}
+
+td:hover {
+background-color: rgb(155, 102, 102);
+cursor: pointer;
+}
+
+#resultArea {
+    height: 30vh;
+    background-color: rgb(228, 215, 215);
+    font-size: 70px;
+    text-align: right;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#result {
+    background-color: rgb(159, 159, 194);
+}
+
+#result:hover {
+    background-color: rgb(57, 57, 179); 
+}
+
+.highlight {
+    background-color: rgb(170, 140, 140);
+}
